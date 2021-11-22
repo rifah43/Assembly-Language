@@ -1,0 +1,18 @@
+.data
+input: .asciiz "Enter:"
+f: .float 0.0
+
+.text
+
+li $v0,4
+la $a0,input
+syscall
+
+ldc1 $f2,f
+
+li $v0,6
+syscall
+
+li $v0,2
+add.s  $f12,$f2,$f0
+syscall
